@@ -19,7 +19,7 @@
           views.py為主要撰寫的連結前後端的程式
 
 
-展示影片: https://www.youtube.com/watch?v=isc9mhEDUbE
+初步展示影片: https://www.youtube.com/watch?v=isc9mhEDUbE
 
 
 簡報: https://docs.google.com/presentation/d/1PaS5sdr-PDoTUdE4nauH613Q0pJlRrH6/edit?usp=sharing&ouid=114401370205716503603&rtpof=true&sd=true
