@@ -11,6 +11,9 @@
 
 
 內容: home資料夾包含主要由我們所撰寫的程式
+          templates資料夾當中是網頁的檔案
+          pipelines是transformer model
+          views為主要撰寫的連結前後端的程式
 
 
 展示影片: https://www.youtube.com/watch?v=isc9mhEDUbE
