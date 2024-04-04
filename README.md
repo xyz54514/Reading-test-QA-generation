@@ -14,9 +14,9 @@
 
           templates資料夾當中是網頁的檔案
           
-          pipelines是我們所修改及應用的transformer model
+          pipelines.py是我們所修改及應用的transformer model
           
-          views為主要撰寫的連結前後端的程式
+          views.py為主要撰寫的連結前後端的程式
 
 
 展示影片: https://www.youtube.com/watch?v=isc9mhEDUbE
