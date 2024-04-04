@@ -14,7 +14,7 @@
 
           templates資料夾當中是網頁的檔案
           
-          pipelines是transformer model
+          pipelines是我們所修改及應用的transformer model
           
           views為主要撰寫的連結前後端的程式
 
