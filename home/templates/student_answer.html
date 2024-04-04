@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>student answer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	<style>
+		table1 {
+			width: 100%;
+			display: block;
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+   </style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<form action="/student_answer_/" method="post">
+									{% csrf_token %}
+									<table1>
+
+									{% for showid, id,q in results %}
+										<tr>
+											<th>
+									{% if currentid == id %}
+									<input type="submit" value="{{ showid }}" name="choice_id" style="font-size:25px;border-radius: 20%;" disabled></input>
+									{% else %}
+									<input type="submit" value="{{ showid }}" name="choice_id" style="font-size:25px;border-radius: 20%;"></input>
+									{% endif %}
+												</th>
+										</tr>
+									{% endfor %}
+									</table1>
+									<h2></h2>
+								<!-- Table -->
+									<h2>{{title}}</h2>
+
+									<iframe src= "{% url 'go_passage' %}" width="100%" height="300" title="文章" style="border:1px solid black;">
+									</iframe>
+									<div class="table-wrapper">
+
+												<table>
+													<thead>
+													<tr>
+
+													<th style="width:65%"><font size="4">問題</font></th>
+													<th><font size="4">答案</font></th>
+
+													</tr>
+													</thead>
+
+													<tbody>
+
+														<tr>
+
+
+															<div class="col-6 col-12-xsmall">
+																<td>
+																	<h3>{{currentQ}}</h3>
+																</td>
+															</div>
+															<div class="col-6 col-12-xsmall">
+																<td>
+																	<input value="{{ currentAS }}" type="text" name="answer" id="answer" size="45"/>
+																</td>
+															</div>
+
+
+														</tr>
+
+
+													</tbody>
+												</table>
+												<div class="col-12">
+                                                    <ul class="actions">
+                                                        {% if currentid != last_id %}
+                                                        <li><input type="submit" name = "choice_id" value="下一題" style="font-size:15px"/></li>
+                                                        {% endif %}
+                                                        {% if type != "exam" %}
+                                                        <li><input type="submit" name = "choice_id" value="確認答案" class="primary" style="font-size:15px"/></li>
+                                                        {% endif %}
+                                                        {% if currentid == last_id %}
+                                                        <li><input type="submit" name = "choice_id" value="繳交" style="font-size:15px"/></li>
+                                                        {% endif %}
+                                                    </ul>
+                                                </div>
+
+								</form>
+
+
+							</section>
+
+					</div>
+
+
+			</div>
+
+	</body>
+</html>

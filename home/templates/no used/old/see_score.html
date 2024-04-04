@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>see_score</title>
+</head>
+<body bgcolor="#c4feff">
+    <table style="border:3px #cccccc solid;" cellpadding="10" border='10'>
+        <tr>
+            <th>title</th>
+            <th>score</th>
+        </tr>
+        {% for title,score in  results %}
+        <tr>
+            <td>{{ title }}</td>
+            <td>{{ score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

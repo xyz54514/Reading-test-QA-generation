@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>student answer check error</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+
+								<!-- Table -->
+									<h2>{{title}}</h2>
+
+									<iframe src= "{% url 'go_passage_explain' %}" width="100%" height="300" title="文章" style="border:1px solid black;">
+									</iframe>
+									<div class="table-wrapper">
+										<form method="post" action="/student_answer_/">
+											{% csrf_token %}
+												<table bgcolor="#93FF93">
+													<thead>
+													<tr>
+
+													<th style="width:65%"><font size="4">問題</font></th>
+													<th><font size="4">答案</font></th>
+
+													</tr>
+													</thead>
+
+													<tbody>
+
+														<tr>
+
+
+															<div class="col-6">
+																<td>
+																	<h3>{{currentQ}}</h3>
+																</td>
+															</div>
+															<div class="col-6 col-12-xsmall">
+																<td>
+																	<h3>{{currentAS}}</h3>
+																</td>
+															</div>
+
+
+														</tr>
+
+													</tbody>
+												</table>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" name = "choice_id" value="返回" style="font-size:15px"/></li>
+													</ul>
+												</div>
+											
+										</form>
+									</div>
+
+							</section>
+
+					</div>
+
+
+			</div>
+
+	</body>
+</html>

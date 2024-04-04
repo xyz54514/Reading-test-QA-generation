@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+</head>
+<body bgcolor="#c4feff">
+    <h1>{{ text }}</h1>
+    <table style="border:3px #cccccc solid;" cellpadding="10" border='10'>
+        <tr>
+            <th>id</th>
+            <th>question</th>
+            <th>answer</th>
+        </tr>
+        {% for id,q,a in  results %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ q }}</td>
+            <td>{{ a }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/modify_second/">
+        <h3><input type="submit" value="modify"></h3>
+    </form>
+
+    <form action="/delete_table/">
+        <h3><input type="submit" value="delete"></h3>
+    </form>
+</body>
+</html>

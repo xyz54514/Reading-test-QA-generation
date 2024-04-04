@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body bgcolor="#c4feff">
+    <h1>login</h1>
+    <form method="get" action="/login_/">
+        <h3>account:<input required type="text" name="account" style="width:800px;"></h3>
+        <h3>password:<input required type="password" name="password" style="width:800px;"></h3>
+        <h3><input type="submit" value="login"></h3>
+    </form>
+   <br>
+    <h3>no account? register below</h3>
+    <form action="/register/">
+        <select name="job">
+            <option value="teacher">teacher</option>
+            <option value="student" selected>student</option>
+        </select>
+        <h3><input type="submit" value="register"></h3>
+    </form>
+
+</body>
+</html>

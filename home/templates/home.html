@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body>
+		
+		<div id="wrapper" class="fade-in">
+					<!-- intro -->
+					<div id="intro">
+					
+						<h1>閱讀測驗問題與解答自動生成系統</h1>
+						<h2><font color="#1af4b7">教師的好夥伴</font></h2>
+							
+					</div>
+							
+					
+					<div id="main">
+
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<header>
+										
+										<h2>教師</h2>
+									</header>
+									<p><font size="5"><b>利用文章生成題目&答案<br>查看、修改已生成的題目&答案</b></font></p>
+									<ul class="actions special">
+										<li><a href="{% url 'teacher_login' %}" class="button"><font size="5">登入</font></a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										
+										<h2>學生</h2>
+									</header>
+									<p><font size="5"><b>進行閱讀測驗，取得成績<br>查看已測驗過的結果</b></font></p>
+									<ul class="actions special">
+										<li><a href="{% url 'student_login' %}" class="button"><font size="5">登入</font></a></li>
+									</ul>
+								</article>
+								
+							</section>
+
+
+					</div>
+			<!-- Intro -->
+					<div id="intro">
+						
+						<h2>背景</h2>
+						<p><font size="5">閱讀測驗可以增進學生對專業文章內容的理解，也能讓學生從
+							中學習各方面的知識。但是要出一份閱讀測驗題目，需要花教師相
+							當多的時間與人力，此外在考卷的批改上，特別是簡答題，更需要
+							耗費許多時間成本。至於成績統計的部分也是值得關注的焦點。
+						</font></p>
+						<h2>動機</h2>
+						<p><font size="5">一般考試的閱讀測驗都是由教師去選擇一篇文章閱讀後將重點
+							整理出後製成問題，但是在整理重點到製成問題的這段過程所需過
+							多的時間成本。為了提升效率，我們研究如何把這段過程交由深度
+							學習去完成。
+						</font></p>
+						<h2>目的</h2>
+						<p><font size="5">本專題計畫是要開發一個自動化閱讀測驗系統，包括出題目、
+							改題目、以及解釋和統計的功能。
+						</font></p>
+							
+					</div>
+
+		</div>
+		
+	</body>
+</html>

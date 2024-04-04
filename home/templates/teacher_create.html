@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>teacher create</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+		<style>
+		#loader{
+			display: block;
+		}
+        /* Center the loader */
+        #loader {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: 1;
+          width: 150px;
+          height: 150px;
+          margin: -75px 0 0 -75px;
+          border: 16px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 16px solid #3498db;
+          width: 160px;
+          height: 160px;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+		  display: none;
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+          position: relative;
+          -webkit-animation-name: animatebottom;
+          -webkit-animation-duration: 1s;
+          animation-name: animatebottom;
+          animation-duration: 1.5s
+        }
+
+        @-webkit-keyframes animatebottom {
+          from { bottom:-100px; opacity:0 }
+          to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom {
+          from{ bottom:-100px; opacity:0 }
+          to{ bottom:0; opacity:1 }
+        }
+
+</style>
+
+	</head>
+	<body>
+	<div id = "loader"></div>
+	<div id="lololo">
+		<div id="wrapper" class="fade-in">
+			<!-- Intro -->
+					<div id="intro">
+						<h1>製作新的閱讀測驗</h1>
+						
+					</div>
+					
+					
+					<!-- Footer -->
+					<footer id="footer">
+					
+						<section>
+							<form method="post" action="/teacher_create_/">
+								{% csrf_token %}
+								<div class="row gtr-uniform">
+									<div class="col-2-small">
+										<label for="title"><font size="5">文章標題</font></label>
+									</div>
+									<div class="col-4">
+										<input type="text" name="title" id="title" />
+									</div>
+									<!-- Break -->
+									<div class="col-2">
+										<label for="title"><font size="5">選擇試卷類型</font></label>
+									</div>
+									<div class="col-4">
+										<!--<select name="type" id="type" style="font-size:20px;font-weight:bold;" required>
+											<option value="">- 選擇試卷類型 -</option>
+											<option value="exam">考試</option>
+											<option value="test">自我練習</option>
+										</select>-->
+										<input type="radio" id="exam" name="type" value="exam">
+										<label for="exam"><font size="5">考試</font></label>
+										<input type="radio" id="test" name="type" value="test" checked>
+										<label for="test"><font size="5">自我練習</font></label>
+									</div>
+
+									<!-- Break -->
+									<div class="col-12">
+										<label for="passage"><font size="5">文章</font></label>
+										<label for="passage"><font size="3" color="red">*限定英文</font></label>
+										<textarea name="passage" id="passage" rows="6" required></textarea>
+									</div>
+								</div>
+								</br>
+								<ul class="actions">
+									<li><input type="submit" value="開始生成" style="font-size:20px" onclick="myFunction()"/></li>
+								</ul>
+							</form>
+						</section>
+					</footer>
+		</div>
+	</div>
+		<script>
+    function myFunction() {
+    	const value = document.getElementById("passage").value;
+    	if(value != ''){
+			document.getElementById("loader").style.display = "block";
+        	document.getElementById("lololo").style.display = "none";
+        }
+	}
+    $(document).ready(function () {
+			$('#lololo input').click();
+			document.getElementById("loader").style.display = "block";
+        	document.getElementById("lololo").style.display = "none";
+    });
+</script>
+	</body>
+</html>

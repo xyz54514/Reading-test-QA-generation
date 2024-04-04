@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<style>
+    p{
+        font-size: 30px;
+        text-align:center;
+    }
+</style>
+<body bgcolor="#c4feff">
+{% load static %}
+<h1 align="center">Choose Your Identity</h1>
+<a href="{% url 'teacher_choice' %}"><img src="{% static 'image/teacher.png' %}" alt="not found"
+     width="300px" height="300px" border="10" title="teacher" style="display:block; margin:auto;">
+    <p>teacher</p></a>
+
+
+<img src="{% static 'image/student.png' %}" alt="not found" width="300px" height="300px"
+     border="10" title="student" style="display:block; margin:auto;">
+<p>student</p>
+
+<a href="{% url 'hello' %}"><p>HELLO</p></a>
+
+</body>
+</html>

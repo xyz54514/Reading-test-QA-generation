@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>student choice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+
+
+	</head>
+	<body>
+		<div id="wrapper" class="fade-in">
+			<!-- Intro -->
+					<div id="intro">
+						<p style="text-align:right;"><a href="{% url 'go_home' %}" class="button"><font size="3">登出</font></a></p>
+						<h1>學生端使用方法</h1>
+
+						<p>​<font size="5"><font color="#FFFF37">步驟 1 :</font> 選擇一個標題進行測驗。每答完一題皆可確認答案是否正確。</font></p>
+
+						<p><font size="5"><font color="#FFFF37">步驟 2 :</font> 測驗完成後將會對你的回答進行批改，
+						最後獲得本次分數與正確答案。</font></p>
+
+						<p><font size="5"><font color="#FFFF37">步驟 3 :</font> 可以查看已經完成的結果。</font></p>
+					</div>
+					<!-- Main -->
+					<div id="main">
+
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+
+									<ul class="actions special">
+										<li><a href="{% url 'student_choice_title' %}" class="button"><font size="5">選擇標題進行測驗</font></a></li>
+									</ul>
+								</article>
+								<article>
+
+									<ul class="actions special">
+										<li><a href="{% url 'student_choice_score' %}" class="button"><font size="5">檢視已進行過的測驗</font></a></li>
+									</ul>
+								</article>
+								
+							</section>
+
+
+					</div>
+		</div>
+		
+	</body>
+</html>

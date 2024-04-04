@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>teacher choice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+		
+
+	</head>
+	<body>
+		<div id="wrapper" class="fade-in">
+			<!-- Intro -->
+					<div id="intro">
+						<p style="text-align:right;"><a href="{% url 'go_home' %}" class="button"><font size="3">登出</font></a></p>
+						<h1>教師端使用方法</h1>
+						
+						<p>​<font size="5"><font color="#FFFF37">步驟 1 :</font> 將準備好的文章(限定英文)、標題(可不加)和試卷類型放入生成系統，
+						按下"開始生成"後系統即會開始根據文章生成問題及答案。</font></p>
+						
+						<p><font size="5"><font color="#FFFF37">步驟 2 :</font> 教師可以勾選不適當的題目進行刪除或編輯後，按下"完成"即上傳這份考題。</font></p>
+						
+						<p><font size="5"><font color="#FFFF37">步驟 3 :</font> 若之後對某份考題不滿意，希望稍作修改，
+						可以再選擇該份考題進行編輯問題或答案。對問題做編輯後系統將依據修改過後的問題重新生成答案。</font></p>
+					</div>
+					<!-- Main -->
+					<div id="main">
+
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									
+									<ul class="actions special">
+										<li><a href="{% url 'teacher_create' %}" class="button"><font size="5">製作新的閱讀測驗(限定英文)</font></a></li>
+									</ul>
+								</article>
+								<article>
+									
+									<ul class="actions special">
+										<li><a href="{% url 'go_teacher_choice_title' %}" class="button"><font size="5">檢視已有的閱讀測驗</font></a></li>
+									</ul>
+								</article>
+								
+							</section>
+
+
+					</div>
+		</div>
+		
+	</body>
+</html>

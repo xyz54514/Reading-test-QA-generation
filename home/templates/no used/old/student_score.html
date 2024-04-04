@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student_score</title>
+</head>
+<body bgcolor="#c4feff">
+    <h1>correct : {{ correct }}</h1>
+    <h1>number of questions : {{ topic_size }}</h1>
+    <table style="border:3px #cccccc solid;" cellpadding="10" border='10'>
+        <tr>
+            <th>your wrong answer</th>
+            <th>correct answer</th>
+        </tr>
+        {% for user,corr in  results %}
+        <tr>
+            <td>{{ user }}</td>
+            <td>{{ corr }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="/back_student_choice/">
+        <h3><input type="submit" value="back"></h3>
+    </form>
+</body>
+</html>

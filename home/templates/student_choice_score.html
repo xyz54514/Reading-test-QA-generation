@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+<html>
+	<head>
+		<title>student chioce score</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Intro -->
+					<div id="intro">
+						<br>
+
+
+					</div>
+
+				<!-- Main -->
+					<div id="main1">
+						<br>
+
+						<!-- Post -->
+							<section class="post">
+
+
+								<!-- Form -->
+									<h2><font size="7">選擇標題進行成績查詢</font><h2>
+									<form method="post" action="/student_choice_score2/">
+										{% csrf_token %}
+										<table>
+											<thead>
+												<tr>
+												    <th style="width:5%"><font size="5"></font></th>
+													<th style="width:60%"><font size="5">標題</font></th>
+													<th><font size="5">成績</font></th>
+												</tr>
+											</thead>
+
+
+												<tbody>
+												{% csrf_token %}
+												{% for name, id, score in result %}
+												<tr>
+												    <td>
+												    <input type="radio" id="{{ id }}" name="choice_title" value="{{ name }}"checked>
+												    <label for="{{ id }}"><font size="3"></font></label>
+													</td>
+													<td>
+													<div class="col-6 col-12-small">{{name}}</div>
+													</td>
+													<td>
+													<div class="col-6 col-12-small">{{score}}</div>
+													</td>
+												</tr>
+												{% endfor %}
+												</tbody>
+
+										</table>
+											<!-- Break -->
+											<div class="col-12">
+
+											</div>
+
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" value="確定" class="primary" style="font-size:15px"/></li>
+													<!--
+													<li><a href="{% url 'student_score' %}" class="button"><font size="5">返回</font></a></li>
+													-->
+												</ul>
+											</div>
+										</div>
+									</form>
+
+									
+
+							</section>
+							
+
+					</div>
+
+
+			</div>
+
+	</body>
+</html>

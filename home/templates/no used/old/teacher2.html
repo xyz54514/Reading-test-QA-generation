@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>teacher2</title>
+</head>
+<body bgcolor="#c4feff">
+    <form action="{% url 'question_generation' %}" method="post">{% csrf_token %}
+        <h1>Please enter passage title</h1>
+        <textarea required name="title"  style="height:10px; width:400px;"></textarea><br>
+        <font color="#FF0000">passage title already used</font>
+        <h1>Please enter the passage</h1>
+        <textarea required name="passage"  style="height:500px; width:400px;">{{ text }}</textarea><br>
+        <input type="submit" value="send">
+    </form>
+
+</body>
+</html>

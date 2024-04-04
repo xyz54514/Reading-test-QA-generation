@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jojo's blog</title>
+</head>
+<body bgcolor="#c4feff">
+    <h2>Q&A</h2>
+    <h3>{{ text }}</h3>
+    {% for id,q,a in  results %}
+    <form method="get" action="/modify_db/">
+        <h3>id <input type="text" name="id" value="{{ id }}" style="width:800px;" readonly></h3>
+        <h3><input type="text" name="A" value="{{ q }}" style="width:800px;"></h3>
+        <h3><input type="text" name="B" value="{{ a }}" style="width:800px;"></h3>
+        <h3><input type="submit" value="resave"></h3>
+    </form>
+    {% endfor %}
+    <form action="/teacher_choice/">
+        <h3><input type="submit" value="back"></h3>
+    </form>
+    <form action="/delete_table/">
+        <h3><input type="submit" value="all delete"></h3>
+    </form>
+</body>
+</html>

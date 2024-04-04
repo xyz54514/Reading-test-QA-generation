@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student answer</title>
+</head>
+<body bgcolor="#c4feff">
+    <h3>{{ text }}</h3>
+
+    <form method="get" action="/answer_compared/">
+        {% for id,q in results %}
+        <h3>{{ q }}</h3>
+        <h3><input type="text" name="{{ id }}" style="width:800px;"></h3>
+        {% endfor %}
+        <h3><input type="submit" value="submit"></h3>
+    </form>
+</body>
+</html>
