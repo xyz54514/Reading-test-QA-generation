@@ -25,4 +25,4 @@
 簡報: https://docs.google.com/presentation/d/1PaS5sdr-PDoTUdE4nauH613Q0pJlRrH6/edit?usp=sharing&ouid=114401370205716503603&rtpof=true&sd=true
 
 
-詳細報告: https://drive.google.com/file/d/19qcFKg0I2d8PdOZgmkuVKeFyh6Nd0cO-/view?usp=sharing
+報告書: https://drive.google.com/file/d/19qcFKg0I2d8PdOZgmkuVKeFyh6Nd0cO-/view?usp=sharing
