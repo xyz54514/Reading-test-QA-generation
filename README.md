@@ -9,10 +9,16 @@
 
 簡介: 使用django開發並應用transformer程式，讓教師能輕鬆進行閱讀測驗簡答題出題及批改、學生能線上答題和訂正的網站。
 
+使用技術：AI transformer model、Django
+
+使用語言：Python、HTML、SQL、CSS
+
+資料庫：SQLite
+
 
 內容: home資料夾包含主要由我們所撰寫的程式
 
-          templates資料夾當中是網頁的檔案
+          templates資料夾當中是網頁的檔案(.html)
           
           pipelines.py是我們所修改及應用的transformer model
           
